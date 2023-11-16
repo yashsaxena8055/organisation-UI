@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="upload-template">
+
+    <div class="container-item"><h1>Template Screen</h1></div>
+    <div class="container-item"><button (click)="downloadTemplate()">Download Template</button></div>
+    <div class="container-item"><input type="file" class="file-upload"  (change)="onFileSelected($event,'Credable')"></div>
+    <div class="container-item"><button (click)="fileUpload()">Upload Template</button></div>
+    <br><br>
+  </div>
+
+
+
+<!--   
+  <div class="" *ngFor="let item of tempData">
+    <div class="table" *ngFor="let map of item | keyvalue">
+      <div class="tb-data">{{map.value}}</div>
+  </div>
+  </div>
+  </div> -->
+
+ 
+
+
+
+<table>
+
+    <tr >
+      <th *ngFor="let item of header">{{item}}</th>
+      </tr>
+      <tr *ngFor="let item of tempData">
+        <td *ngFor="let map of item | keyvalue">{{map.value}}</td>
+      </tr>
+      
+  
+
+ 
+</table>
+<!-- <div class="container-item"><button>Upload   Template</button></div> -->
+

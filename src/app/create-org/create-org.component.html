@@ -1,0 +1,16 @@
+<div class="container">
+
+    <form #form1 = "ngForm" (submit)="onSubmit(form1.value)">
+
+        <div class="tab">
+            <p><input placeholder="Organisation name"  ngModel name="orgName" id="orgName"></p>
+            <form  #form2 = "ngForm"(submit)="addCol(form2.value)" >
+                <p><input placeholder="Add column in organisation" [(ngModel)] = "columnName" name = "columnName" name="columnName" id="columnName" ><button  type="submit">Add Column</button></p>
+            </form>
+    
+            <button  type="submit">create Organisation</button>
+          </div>
+          
+       
+    </form>
+</div>

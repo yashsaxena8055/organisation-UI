@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>List of Organisations</h1>
+  
+    <div *ngFor="let resp of response">
+     <a class=""  [routerLink]="['/displayOrg',resp.orgName]" > <h3>{{resp.orgName}}</h3></a>
+    </div>
+   
+    </div>
+    
+
+    <!-- <div class="createOrg"><h2  class="createOrgItem">Create Organisations</h2>
+        <div  class="createOrgItem"><img sizes="10px 10px" (click)="openCreateBlock()" src="../assets/add.png"  style="height: 25px; width: 25px;"></div></div>
+        <router-outlet></router-outlet>
+        <div id="comp-render" *ngIf="displayCreate">
+            <app-create-org></app-create-org>
+        </div> -->

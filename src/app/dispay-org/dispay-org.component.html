@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="displayOrg ">
+   
+        <div class="displayItem"><h3>Column name of Organisation 
+            <img sizes="10px 10px"  (click)="openCreateBlock()" src="../assets/add.png"  style="height: 25px; width: 25px; margin-left: 10px;">
+        </h3></div>
+        <div class="displayItem "><h3>Column name in db (ReadOnly)</h3></div>
+        
+        </div>
+        
+        <div class="displayOrg" *ngFor="let col of colMap | keyvalue">
+          
+            <div class="displayItem left-col"><h4>{{col.key}}</h4></div>
+            <div class="displayItem right-col"><h4>{{col.value}}</h4></div>
+            
+            </div>
+            <div class="displayItemButton"><button routerLink="/template/{{orgName}}">Next>></button></div>
+            
+            
+            <div class="displayUpdateCol">
+                <app-create-org *ngIf="isCreateBoxEnable"></app-create-org>
+        </div>
+            
+
+</div>
